@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
 
-  <body class="font-poppins">
+  <body class="font-poppins max-h-screen">
     <main
       class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-contain bg-center"
     >
@@ -94,7 +94,6 @@
               <kbd id="b" class="kbd">b</kbd>
               <kbd id="n" class="kbd">n</kbd>
               <kbd id="m" class="kbd">m</kbd>
-              <kbd id="/" class="kbd">/</kbd>
             </div>
           </div>
           <!-- keyboard end -->
@@ -103,12 +102,12 @@
             <button class="btn rounded-full bg-red-500 text-white px-4">
               Life
               <img src="images/heart.svg" alt="" />
-              <span>1</span>
+              <span id="life-count">5</span>
             </button>
             <button class="btn rounded-full bg-purple-700 text-white px-4">
               Score
               <img src="images/dollar.svg" alt="" />
-              <span>1</span>
+              <span id="score-count">0</span>
             </button>
           </div>
         </div>
@@ -116,17 +115,18 @@
       <!-- playground end -->
       <!-- final Score start -->
       <section
+        id="score-section"
         class="score flex justify-center items-center min-h-screen hidden"
       >
         <div
-          class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg"
+          class="text-white text-center space-y-6 bg-[#FFFFFF33] p-6 rounded-lg"
         >
           <h1 class="text-8xl">
             <span class="font-extrabold">Score:</span>
-            <span>14</span>
+            <span id="final-score">0</span>
           </h1>
-          <button class="btn">Play Again</button>
-          <p>Practice will make you a Pro</p>
+          <button class="btn" onclick="play()">Play Again</button>
+          <p>Practice will make you better</p>
         </div>
       </section>
     </main>
